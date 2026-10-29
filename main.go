@@ -50,13 +50,12 @@ func main() {
 
 		pubKey, privKey, _ := ed25519.GenerateKey(rand.Reader)
 
-		dataToSign := fmt.Sprintf("%s%s%s%d", req.From, req.To, req.Data, req.Timestamp.Unix())
+		dataToSign := fmt.Sprintf("%s%s%d", req.Name, req.Data, req.Timestamp.Unix())
 
 		signature := ed25519.Sign(privKey, []byte(dataToSign))
 
 		tx := graph.Transaction{
-        	From:   	 map[uuid.UUID]string{uuid.New(): req.From},
-        	To:  		 map[uuid.UUID]string{uuid.New(): req.To},
+        	Name:   	 map[uuid.UUID]string{uuid.New(): req.Name},
         	Data:   	 req.Data,
         	Timestamp:   time.Now(),
 			Signature: signature,

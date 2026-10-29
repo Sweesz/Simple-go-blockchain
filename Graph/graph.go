@@ -6,16 +6,14 @@ import (
 )
 
 type Transaction struct {
-	From      map[uuid.UUID]string `json:"from"`
-	To        map[uuid.UUID]string `json:"to"`
+	Name      map[uuid.UUID]string `json:"name"`
 	Data      string `json:"type"`
 	Timestamp time.Time
 	PubKey []byte
 	Signature []byte
 }
 type CreateTransaction struct {
-	From      string `json:"from"`
-	To        string `json:"to"`
+	Name      string `json:"name"`
 	Data      string `json:"type"`
 	Timestamp time.Time
 }
