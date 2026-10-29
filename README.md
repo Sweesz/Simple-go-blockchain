@@ -1,5 +1,5 @@
 
-# Coursework blockchain
+# Blockchain implementation in Go with REST API and Ed25519 signatures
 
 > **Educational Project (Coursework)**  
 > A simplified blockchain implementation in **Go** featuring a web interface for visualizing the block chain and adding cryptographically signed records.
