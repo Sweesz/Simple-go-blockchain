@@ -1,4 +1,6 @@
-
+![Go Version](https://img.shields.io/badge/Go-1.21+-00ADD8?logo=go)
+![Echo Framework](https://img.shields.io/badge/Echo-v5-009688?logo=go)
+![License](https://img.shields.io/badge/License-Educational-blue)
 # Blockchain implementation in Go with REST API and Ed25519 signatures
 
 > **Educational Project (Coursework)**  
